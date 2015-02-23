@@ -1,0 +1,63 @@
+<?php
+$orders = Mage::getModel('tegdesign_legacyorders/orders')->retrieveOrders();
+$helper = Mage::helper('tegdesign_legacyorders');
+?>
+
+<div class="page-title">
+	<h1>Order History</h1>
+</div>
+
+<?php echo $helper->getLegacyOrderHistoryText(); ?>
+
+<table class="data-table orders" id="legacy-orders-table">
+    <colgroup>
+        <col width="1">
+        <col width="1">
+        <col width="1">
+        <col width="1">
+    </colgroup>
+
+    <thead>
+        <tr class="first last">
+            <th class="number">Order #</th>
+            <th class="date">Date</th>
+            <th class="total">
+                <span class="nobr">Order Total</span>
+            </th>
+            <th class="view_order">&nbsp;</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <?php
+        $c = 0;
+        foreach ($orders as $order):
+        ?>
+        <tr class="<?=($c++%2==1) ? 'odd' : 'even' ?>">
+
+            <td class="order_num">
+               <a href="/legacyorders/view/index/id/<?php echo $order->getId(); ?>"><?php echo $order->getOrderId(); ?></a>
+            </td>
+
+            <td class="date">
+                <span class="nobr">
+                    <?php
+                        echo $this->formatDate($order->getCreatedAt(), 'short')
+                    ?>
+                </span>
+            </td>
+
+            <td class="total">
+                <?php 
+                echo Mage::helper('core')->currency($order->getGrandTotal(), true, false);
+                ?>
+            </td>
+
+            <td class="last">
+                <a href="/legacyorders/view/index/id/<?php echo $order->getId(); ?>">View Order</a>
+            </td>
+
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>

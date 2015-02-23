@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<layout>
+
+    <customer_account>
+        <reference name="customer_account_navigation">
+            <action method="addLink" ifconfig="tegdesign_legacyorders/settings/legacyorders_enabled">
+                <name>tegdesign_legacyorders</name>
+                <path>legacyorders/index</path>
+                <label>Legacy Orders</label>
+            </action>
+        </reference>
+    </customer_account>
+
+    <tegdesign_legacyorders_index_index>
+	    <update handle="customer_account" />
+	    <reference name="my.account.wrapper">
+	        <block type="core/template" name="tegdesign_legacyorders_content" template="tegdesign/legacyorders/orders.phtml"/>
+	    </reference>  
+	</tegdesign_legacyorders_index_index>
+
+    <tegdesign_legacyorders_view_index>
+        <update handle="customer_account" />
+        <reference name="my.account.wrapper">
+            <block type="core/template" name="tegdesign_legacyorders_view" template="tegdesign/legacyorders/view.phtml"/>
+        </reference>  
+    </tegdesign_legacyorders_view_index>
+
+</layout>

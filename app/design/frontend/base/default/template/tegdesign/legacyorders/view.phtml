@@ -1,0 +1,13 @@
+<?php 
+$order_id = Mage::registry('order_id');
+?>
+
+<div class="page-title title-buttons">
+
+    <h1><?php echo $this->__('Order #%s - %s', $order_id, 'shipped'); ?></h1>
+
+</div>
+
+<p class="order-date">
+<?php echo $this->__('Order Date: %s', $this->formatDate('2015/01/01', 'long')) ?>
+</p>

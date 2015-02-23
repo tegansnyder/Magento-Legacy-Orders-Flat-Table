@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Tegdesign_LegacyOrders>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Tegdesign_LegacyOrders>
+    </modules>
+</config>

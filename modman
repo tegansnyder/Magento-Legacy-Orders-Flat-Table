@@ -1,0 +1,5 @@
+app/etc/modules/Tegdesign_LegacyOrders.xml
+app/code/community/Tegdesign/LegacyOrders
+app/design/frontend/base/default/layout/tegdesign/legacyorders.xml
+app/design/frontend/base/default/template/tegdesign/legacyorders/orders.phtml
+app/design/frontend/base/default/template/tegdesign/legacyorders/view.phtml
