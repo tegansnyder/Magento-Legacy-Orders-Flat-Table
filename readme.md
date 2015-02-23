@@ -4,6 +4,8 @@ The use case of this extension would be when you don't want to go through the ha
 
 Feel free to submit PRs and improve on this.
 
+[[images/img1.png]]
+
 --------------
 
 ### Installing this extension
@@ -13,6 +15,9 @@ modman clone https://github.com/tegansnyder/magento-legacy-orders.git
 
 ### System Configuration
 A new section under the System -> Configuration -> Sales tab is added called "Legacy Orders". In this section you can enable/disable configure the text messaging displayed.
+
+[[images/img2.png]]
+
 
 ### Database table format
 
